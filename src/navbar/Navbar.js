@@ -15,10 +15,10 @@ function Navbar() {
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
+                    <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+                        <img src={Logo} className='app-logo' alt='logo'/>
+                    </Link>
                     <div className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                            <img src={Logo} className='app-logo' alt='logo'/>
-                        </Link>
                         <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                             Startseite
                         </Link>
