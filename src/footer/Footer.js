@@ -7,14 +7,12 @@ function footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Kontaktiere uns:
-        </p>
-        <p>Modellbahn Kaufmann</p>
-        <p>Bahnhofstraße 12</p>
-        <p>6850 Dornbirn</p>
-        <p>+43 5572/54149</p>
-        <p>modellbahn@avidonet.at</p>
+        <p className='footer-subscription-heading'>Kontaktiere uns:</p>
+        <p className='footer-subscription-text'>Modellbahn Kaufmann</p>
+        <p className='footer-subscription-text'>Bahnhofstraße 12</p>
+        <p className='footer-subscription-text'>6850 Dornbirn</p>
+        <p className='footer-subscription-text'>+43 5572/54149</p>
+        <p className='footer-subscription-text'>modellbahn@avidonet.at</p>
       </section>
       <section className='footer-links'>
         <div className='footer-logo'>
