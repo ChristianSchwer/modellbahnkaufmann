@@ -16,9 +16,11 @@ function Inventar() {
             <div className="filter">                        
                 <label className="filter-label">
                     Suchbegriff:
-                    <input type="text" placeholder="Suchbegriff" className="filter-search"></input>
-                    <div className='menu-icon' onClick={handleClick}>
-                        <i className="fas fa-filter"></i>
+                    <div className="filter-group">
+                        <input type="text" placeholder="Suchbegriff" className="filter-search"></input>
+                        <div className='filter-icon' onClick={handleClick}>
+                            <i className="fas fa-filter"></i>
+                        </div>
                     </div>
                 </label>                       
                 <label className={click ? 'filter-label' : 'filter-label deactive'}>
