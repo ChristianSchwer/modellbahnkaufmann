@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/modellbahnkaufmann/static/css/main.e15fb8c7.chunk.css",
+    "main.css": "/modellbahnkaufmann/static/css/main.aa2d4444.chunk.css",
     "main.js": "/modellbahnkaufmann/static/js/main.48ff560b.chunk.js",
     "main.js.map": "/modellbahnkaufmann/static/js/main.48ff560b.chunk.js.map",
     "runtime-main.js": "/modellbahnkaufmann/static/js/runtime-main.ba2cb6a1.js",
@@ -8,7 +8,7 @@
     "static/js/2.4e514e9e.chunk.js": "/modellbahnkaufmann/static/js/2.4e514e9e.chunk.js",
     "static/js/2.4e514e9e.chunk.js.map": "/modellbahnkaufmann/static/js/2.4e514e9e.chunk.js.map",
     "index.html": "/modellbahnkaufmann/index.html",
-    "static/css/main.e15fb8c7.chunk.css.map": "/modellbahnkaufmann/static/css/main.e15fb8c7.chunk.css.map",
+    "static/css/main.aa2d4444.chunk.css.map": "/modellbahnkaufmann/static/css/main.aa2d4444.chunk.css.map",
     "static/js/2.4e514e9e.chunk.js.LICENSE.txt": "/modellbahnkaufmann/static/js/2.4e514e9e.chunk.js.LICENSE.txt",
     "static/media/logo.3448c094.png": "/modellbahnkaufmann/static/media/logo.3448c094.png",
     "static/media/train1.056fc34e.jpg": "/modellbahnkaufmann/static/media/train1.056fc34e.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.ba2cb6a1.js",
     "static/js/2.4e514e9e.chunk.js",
-    "static/css/main.e15fb8c7.chunk.css",
+    "static/css/main.aa2d4444.chunk.css",
     "static/js/main.48ff560b.chunk.js"
   ]
 }
