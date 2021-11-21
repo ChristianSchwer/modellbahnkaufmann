@@ -50,10 +50,8 @@ select {
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
 }
 
 .filter-icon {
@@ -110,7 +108,23 @@ select {
     .filter-icon {
         display: flex;
         cursor: pointer;
-        margin-left: 10px;
+        margin: 0 10px;
         font-size: 1.6rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, calc(100% / 3));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .cards {
+        grid-template-columns: 100%;
     }
 }

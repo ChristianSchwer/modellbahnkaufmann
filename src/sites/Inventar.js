@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
 import Card from '../cards/Card';
 import './Inventar.css';
-import train1 from '../images/train1.jpg';
-import train2 from '../images/train2.jpg';
-import train3 from '../images/train3.jpg';
-import train4 from '../images/train4.jpg';
-import train5 from '../images/train5.jpg';
+import data from '../Data.js';
 
 function Inventar() {
     const [click, setClick] = useState(false);
@@ -51,32 +47,21 @@ function Inventar() {
                 <button className="filter-button">SUCHEN</button>
             </div>
             <div className="cards">
-                <Card data={ {img:train1}}/>
-                <Card data={ {img:train2}} />
-                <Card data={ {img:train3}} />
-                <Card data={ {img:train4}} />
-                <Card data={ {img:train5}} />
-                <Card data={ {img:train1}}/>
-                <Card data={ {img:train2}} />
-                <Card data={ {img:train4}} />
-                <Card data={ {img:train5}} />
-                <Card data={ {img:train1}}/>
-                <Card data={ {img:train2}} />
-                <Card data={ {img:train3}} />
-                <Card data={ {img:train4}} />
-                <Card data={ {img:train2}} />
-                <Card data={ {img:train3}} />
-                <Card data={ {img:train4}} />
-                <Card data={ {img:train5}} />
-                <Card data={ {img:train1}}/>
-                <Card data={ {img:train2}} />
-                <Card data={ {img:train3}} />
-                <Card data={ {img:train4}} />
-                <Card data={ {img:train5}} />
-                <Card data={ {img:train1}}/>
-                <Card data={ {img:train3}} />
-                <Card data={ {img:train4}} />
-                <Card data={ {img:train5}} />
+                {data.map((value, index) => {
+                    return (<Card key={index} data={value} />)
+                })}
+                {data.map((value, index) => {
+                    return (<Card key={index} data={value} />)
+                })}
+                {data.map((value, index) => {
+                    return (<Card key={index} data={value} />)
+                })}
+                {data.map((value, index) => {
+                    return (<Card key={index} data={value} />)
+                })}
+                {data.map((value, index) => {
+                    return (<Card key={index} data={value} />)
+                })}
             </div>
         </div>
     )
