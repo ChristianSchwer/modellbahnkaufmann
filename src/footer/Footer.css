@@ -2,7 +2,8 @@
     background-color: #242424;
     padding: 4rem 0 2rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 'footer-subscription-head footer-subscription-head footer-map footer-links' 'footer-subscription footer-message footer-map footer-links';
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -10,7 +11,12 @@
     margin: 0.5% 0.5% 0 0.5%;
 }
 
+.footer-subscription-head {
+    grid-area: footer-subscription-head;
+}
+
 .footer-subscription {
+    grid-area: footer-subscription;
     width: 100%;
     display: inline-flex;
     flex-direction: column;
@@ -24,8 +30,9 @@
 }
 
 .footer-subscription-heading {
-    margin: 10px 0 24px 20%;
+    margin: 0 20px 0 20px;
     font-size: 28px;
+    color: white;
 }
 
 .footer-subscription-text {
@@ -60,8 +67,31 @@
     color: #b1b1b1;
 }
 
+.footer-message {
+    grid-area: footer-message;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-message-text {
+    height: 100px;
+}
+
+textarea {
+    padding: 6px 20px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-map {
+    grid-area: footer-map;
+}
+
 /* Links */
 .footer-links {
+    grid-area: footer-links;
     width: 100%;
     display: inline-flex;
     flex-direction: column;
