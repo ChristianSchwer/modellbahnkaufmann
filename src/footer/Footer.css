@@ -89,6 +89,10 @@ textarea {
     grid-area: footer-map;
 }
 
+.footer-map-iframe {
+    border-radius: 8px;
+}
+
 /* Links */
 .footer-links {
     grid-area: footer-links;
@@ -175,5 +179,21 @@ textarea {
 
     .footer-links-item a {
         margin: 0 1rem 1rem 0;
+    }
+
+    .footer-message {
+        margin: 0;
+        width: 300px;
+        margin-top: 10px;
+    }
+
+    .footer-massage-email {
+        position: relative;
+        margin: 0;
+        left: 0;
+    }
+
+    .footer-map {
+        margin-top: 10px;
     }
 }

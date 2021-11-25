@@ -17,19 +17,19 @@ function Footer() {
         <p className='footer-subscription-text'>modellbahn@avidonet.at</p>
       </section>
       <section className="footer-message">
-        <input type="email" placeholder="Deine E-Mail Adresse"></input>
+        <input type="email" placeholder="Deine E-Mail Adresse" className="footer-massage-email"></input>
         <textarea type="textarea" placeholder="Deine Nachricht" className="footer-message-text"></textarea>
       </section>
       <section className="footer-map">
-      <iframe 
-        title="map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.7774189958686!2d9.736988215294573!3d47.41628250909938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b6b4cd62aa1cd%3A0x43293b498cc161ea!2sModellbahn%20Kaufmann!5e0!3m2!1sde!2sat!4v1637700134436!5m2!1sde!2sat" 
-        width="100%" 
-        height="300px" 
-        style={{ border: "0" }}
-        allowFullScreen="" 
-        loading="lazy">
-      </iframe>
+        <iframe 
+          title="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2699.843348791864!2d9.738107515294514!3d47.41499660918793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b6b4cec95d0cb%3A0xef51b367d9f6bfbe!2sBahnhofstra%C3%9Fe%2012%2C%206850%20Dornbirn!5e0!3m2!1sde!2sat!4v1637874754549!5m2!1sde!2sat" 
+          width="100%" height="300px" 
+          style={{ border: "0" }} 
+          allowFullScreen="" 
+          loading="lazy"
+          className="footer-map-iframe">
+        </iframe>
       </section>
       <section className='footer-links'>
         <div className='footer-logo'>
