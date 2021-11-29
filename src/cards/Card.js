@@ -17,15 +17,17 @@ function Card(data) {
         <div>
             <div className="card" onClick={e => {showModal();}}>
                 <div className="card-image-wrap">
-                    <img src={data.data.image} alt="train" className="card-image"></img>
+                    <img src={data.data.value.image} alt="train" className="card-image"></img>
                 </div>
                 <div className="card-text-wrap">
-                    <p className="title">{data.data.title}</p>
-                    <p className="description">{data.data.desc}</p>
-                    <p className="price">{data.data.price}</p>
+                    <p className="title">{data.data.value.title}</p>
+                    <p className="description">{data.data.value.desc}</p>
+                    <p className="price">{data.data.value.price}</p>
                 </div>
             </div>
-            <Cardmodal data={{close: onClose, show: show, image: data.data.image, title: data.data.title, desc: data.data.desc, price: data.data.price}} />
+            <Cardmodal data={{ close: onClose, show: show, image: data.data.value.image, 
+                                title: data.data.value.title, desc: data.data.value.desc, 
+                                price: data.data.value.price, addToShoppingcart: data.data.addToShoppingcart }} />
         </div>
     )
 }

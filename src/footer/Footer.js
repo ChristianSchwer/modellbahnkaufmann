@@ -19,6 +19,7 @@ function Footer() {
       <section className="footer-message">
         <input type="email" placeholder="Deine E-Mail Adresse" className="footer-massage-email"></input>
         <textarea type="textarea" placeholder="Deine Nachricht" className="footer-message-text"></textarea>
+        <button className="footer-message-button">Send <i className="fas fa-angle-double-right"></i></button>
       </section>
       <section className="footer-map">
         <iframe 
@@ -38,20 +39,22 @@ function Footer() {
           </Link>
         </div>
         <div className='social-icons'>
-          <Link className='social-icon-link instagram'
-            to={'//www.instagram.com/schwer_christian/'}
+          <a className='social-icon-link instagram'
+            href={'//www.instagram.com/modellbahnkaufmann/'}
             target='_blank'
+            rel="noreferrer noopener"
             aria-label='Instagram'
             >
               <i className='fab fa-instagram'></i>
-          </Link>
-          <Link className='social-icon-link github'
-            to={'//github.com/ChristianSchwer'}
+          </a>
+          <a className='social-icon-link github'
+            href={'//github.com/ChristianSchwer'}
             target='_blank'
+            rel="noreferrer noopener"
             aria-label='Github'
             >
               <i className='fab fa-github'></i>
-          </Link>
+          </a>
         </div>
         <div className='footer-links-item'>
           <Link to='/' className='footer-link'>

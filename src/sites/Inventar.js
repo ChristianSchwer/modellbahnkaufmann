@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../cards/Card';
 import './Inventar.css';
-import data from '../Data.js';
+import traindata from '../Data.js';
 
-function Inventar() {
+function Inventar(data) {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        }, []);
+    
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
+
     return (
         <div className="inventar">
             <div className="filter">                        
@@ -47,20 +53,20 @@ function Inventar() {
                 <button className="filter-button">SUCHEN</button>
             </div>
             <div className="cards">
-                {data.map((value, index) => {
-                    return (<Card key={index} data={value} />)
+                {traindata.map((value, index) => {
+                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
                 })}
-                {data.map((value, index) => {
-                    return (<Card key={index} data={value} />)
+                {traindata.map((value, index) => {
+                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
                 })}
-                {data.map((value, index) => {
-                    return (<Card key={index} data={value} />)
+                {traindata.map((value, index) => {
+                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
                 })}
-                {data.map((value, index) => {
-                    return (<Card key={index} data={value} />)
+                {traindata.map((value, index) => {
+                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
                 })}
-                {data.map((value, index) => {
-                    return (<Card key={index} data={value} />)
+                {traindata.map((value, index) => {
+                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
                 })}
             </div>
         </div>
