@@ -27,7 +27,7 @@ function Card(data) {
             </div>
             <Cardmodal data={{ close: onClose, show: show, image: data.data.value.image, 
                                 title: data.data.value.title, desc: data.data.value.desc, 
-                                price: data.data.value.price, addToShoppingcart: data.data.addToShoppingcart }} />
+                                price: data.data.value.price, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />
         </div>
     )
 }

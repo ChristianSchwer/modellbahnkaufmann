@@ -54,19 +54,19 @@ function Inventar(data) {
             </div>
             <div className="cards">
                 {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
+                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                 })}
                 {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
+                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                 })}
                 {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
+                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                 })}
                 {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
+                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                 })}
                 {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value:value, addToShoppingcart:data.data }} />)
+                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                 })}
             </div>
         </div>

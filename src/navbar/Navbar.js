@@ -56,9 +56,9 @@ function Navbar(data) {
                                 <i className='fab fa-facebook'></i>
                         </a>
                         <div className='nav-links social'
-                            onClick={closeMobileMenu}
+                            onClick={e => {closeMobileMenu(); data.data.showShoppingcartModal()}}
                             >
-                                <i className="fas fa-shopping-cart">{countItems(data.data)}</i>
+                                <i className="fas fa-shopping-cart">{countItems(data.data.shoppingcart)}</i>
                         </div>
                     </div>
                 </div>

@@ -33,10 +33,10 @@ function Cardmodal (data) {
                             <button className="modal-content-description-button" onClick={e => {increas();}}>+</button>
                         </div>
                         <div>
-                            <button className="modal-content-description-button-add" onClick={e => {data.data.addToShoppingcart({value: value, title: data.data.title})}}>In den Einkaufswagen</button>
+                            <button className="modal-content-description-button-add" onClick={e => {data.data.addToShoppingcart({value: value, img: data.data.image, title: data.data.title, desc: data.data.desc, price: data.data.price})}}>In den Einkaufswagen</button>
                         </div>
                         <div>
-                            <button className="modal-content-description-button-add" onClick={e => {console.log('click')}}>Zum Einkaufswagen</button>
+                            <button className="modal-content-description-button-add" onClick={e => {data.data.close(); data.data.showShoppingcartModal()}}>Zum Einkaufswagen</button>
                         </div>
                     </div>
                 </div>
