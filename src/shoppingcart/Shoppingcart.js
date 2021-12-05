@@ -4,6 +4,7 @@ import './Shoppingcart.css';
 function Shoppingcart (data) {
 
     const prepareData = (itemsObject) => {
+        console.log(itemsObject)
         if (itemsObject.length === 0){
             return (
                 <p>Keine Produkte im Warenkorb</p>
@@ -21,13 +22,13 @@ function Shoppingcart (data) {
                             </tr>
                         </thead>
                         <tbody>
-                            {itemsObject.map((item, index) => {
+                            {Object.values(itemsObject).map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{item.value}</td>
-                                        <td><img alt={item.title} src={item.img} className='scImage' /></td>
-                                        <td>{item.title}</td>
-                                        <td>{parseInt(item.price)*item.value + '€'}</td>
+                                        <td>{Object.values(item)[0].amount}</td>
+                                        <td><img alt={Object.values(item)[0].title} src={Object.values(item)[0].image} className='scImage' /></td>
+                                        <td>{Object.values(item)[0].title}</td>
+                                        <td>{parseInt(Object.values(item)[0].price)*Object.values(item)[0].amount + '€'}</td>
                                     </tr>
                                 )
                             })}
@@ -48,15 +49,15 @@ function Shoppingcart (data) {
                             </tr>
                         </thead>
                         <tbody>
-                            {itemsObject.map((item, index) => {
+                            {Object.values(itemsObject).map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{item.value}</td>
-                                        <td><img alt={item.title} src={item.img} className='scImage' /></td>
-                                        <td>{item.title}</td>
-                                        <td>{item.desc}</td>
-                                        <td>{parseInt(item.price)*item.value + '€'}</td>
-                                        <td><button>Löschen</button></td>
+                                        <td>{Object.values(item)[0].amount}</td>
+                                        <td><img alt={Object.values(item)[0].title} src={Object.values(item)[0].image} className='scImage' /></td>
+                                        <td>{Object.values(item)[0].title}</td>
+                                        <td>{Object.values(item)[0].desc}</td>
+                                        <td>{parseInt(Object.values(item)[0].price)*Object.values(item)[0].amount + '€'}</td>
+                                        <td><button onClick={e => {data.data.deletFromShoppingcart(item)}}>Löschen</button></td>
                                     </tr>
                                 )
                             })}
@@ -68,11 +69,11 @@ function Shoppingcart (data) {
     }
 
     return (
-        <div id="myModal" className="modal" style={{display: data.data.showScModal}}>
-            <div className="modal-content">
+        <div id="myModal" className="modal-sc" style={{display: data.data.showScModal}}>
+            <div className="modal-sc-content">
                 <span className="close" onClick={e => {data.data.closeShoppingcartModal()}}>&times;</span>
-                <div className="modal-content-layout">
-                    <div className="modal-content-description">
+                <div className="modal-sc-content-layout">
+                    <div className="modal-sc-content-description">
                         {prepareData(data.data.shoppingcart)}
                     </div>
                 </div>

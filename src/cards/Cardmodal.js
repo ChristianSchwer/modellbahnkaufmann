@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import './Cardmodal.css';
 
 function Cardmodal (data) {
-    const [value, setValue] = useState(1);
+    const [amount, setAmount] = useState(1);
 
     const increas = () => {
-        setValue(value+1);
+        setAmount(amount+1);
     }
 
     const decreas = () => {
-        if (value < 2) {
-            setValue(1);
+        if (amount < 2) {
+            setAmount(1);
         } else {
-            setValue(value-1);
+            setAmount(amount-1);
         }
     }
 
@@ -21,19 +21,19 @@ function Cardmodal (data) {
             <div className="modal-content">
                 <span className="close" onClick={e => {data.data.close()}}>&times;</span>
                 <div className="modal-content-layout">
-                    <img src={data.data.image} alt='train' className="modal-image"/>
+                    <img src={data.data.value.image} alt='train' className="modal-image"/>
                     <div className="modal-content-description">
-                        <p>{data.data.title}</p>
-                        <p>{data.data.desc}</p>
-                        <p>{data.data.price}</p>
+                        <p>{data.data.value.title}</p>
+                        <p>{data.data.value.desc}</p>
+                        <p>{data.data.value.price}</p>
                         <p>more information</p>
                         <div>
                             <button className="modal-content-description-button" onClick={e => {decreas();}}>-</button>
-                            <input type="text" className="modal-content-description-input" value={value} readOnly></input>
+                            <input type="text" className="modal-content-description-input" value={amount} readOnly></input>
                             <button className="modal-content-description-button" onClick={e => {increas();}}>+</button>
                         </div>
                         <div>
-                            <button className="modal-content-description-button-add" onClick={e => {data.data.addToShoppingcart({value: value, img: data.data.image, title: data.data.title, desc: data.data.desc, price: data.data.price})}}>In den Einkaufswagen</button>
+                            <button className="modal-content-description-button-add" onClick={e => {data.data.addToShoppingcart({amount: amount, value: data.data.value})}}>In den Einkaufswagen</button>
                         </div>
                         <div>
                             <button className="modal-content-description-button-add" onClick={e => {data.data.close(); data.data.showShoppingcartModal()}}>Zum Einkaufswagen</button>

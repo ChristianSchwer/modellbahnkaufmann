@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+Instagramm.js
+Test.js
 
 # testing
 /coverage

@@ -1,4 +1,5 @@
 import { React, useEffect } from 'react';
+import Instagramm from '../cards/Instagramm';
 import './Home.css';
 
 function Home() {
@@ -16,6 +17,9 @@ function Home() {
                 <p>Wir sind schon fleißig am Vorbereiten</p>
                 <p>und halten euch auf dem laufenden.</p>
                 <p>Fam. Bereuter</p>
+            </div>
+            <div className="instaPosts">
+                <Instagramm />
             </div>
         </div>
     )

@@ -13,10 +13,49 @@ function App() {
   const [shoppingcart, setShoppingcart] = useState([])
   const [showScModal, setshowScModal] = useState('none');
 
-  const addToShoppingcart = (items) => {
-    setShoppingcart([...shoppingcart, items]);
+  const addToShoppingcart = (item) => {
+    // change item structure
+    let changedItem = {};
+    changedItem[item.value.artikelNr] = item.value;
+    changedItem[item.value.artikelNr]['amount'] = item.amount;
+    console.log(changedItem)
+    // check if something is in the shoppingcart
+    if (Object.entries(shoppingcart).length === 0) {
+      setShoppingcart([changedItem]);
+    } else {
+      shoppingcart.forEach((scItem, index) => {
+        // yes --> update
+        console.log(index)
+        console.log(Object.values(scItem))
+        console.log(item)
+        if (Object.values(scItem)[0].title === item.value.title) {
+          console.log('y')
+          // setShoppingcart(shoppingcart => [...shoppingcart, changedItem]);
+    //       setShoppingcart((prevState) => ({
+    //         ...prevState,
+    //         [item.value.artikelNr]: {
+    //           ...prevState[item.value.artikelNr],
+    //           value: Object.values(scItem)[0].value + item.value
+    //         }
+            
+    // //         //     value: scItem.value + item.value,
+    // //         //     price: scItem.price + item.price,
+    //       }));
+        } else {
+          console.log('n')
+          // no --> add
+          setShoppingcart([...shoppingcart, changedItem]);
+        }
+      });
+    }
   }
 
+  const deletFromShoppingcart = (item) => {
+    console.log(Object.values(item)[0].title)
+    setShoppingcart(shoppingcart.filter(i => Object.values(i)[0].title !== Object.values(item)[0].title));
+  }
+
+  // Object.values(i)[0].title !== Object.values(item)[0].title
   const showShoppingcartModal = () => {
     setshowScModal('block');
   }
@@ -28,7 +67,7 @@ function App() {
   return (
     <div className="App">
       <Navbar data={{ shoppingcart: shoppingcart, showShoppingcartModal: showShoppingcartModal }}/>
-      <Shoppingcart data={{ closeShoppingcartModal: closeShoppingcartModal, showScModal: showScModal, shoppingcart: shoppingcart }}/>
+      <Shoppingcart data={{ closeShoppingcartModal: closeShoppingcartModal, showScModal: showScModal, shoppingcart: shoppingcart, deletFromShoppingcart: deletFromShoppingcart }}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

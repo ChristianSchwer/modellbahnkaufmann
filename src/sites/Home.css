@@ -6,6 +6,11 @@
     background-color: white;
 }
 
+._2R-kh {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 @media screen and (max-width: 960px) {
     .news {
         margin: 0 0.5% 1% 0.5%
