@@ -25,8 +25,10 @@ function Cardmodal (data) {
                     <div className="modal-content-description">
                         <p>{data.data.value.title}</p>
                         <p>{data.data.value.desc}</p>
-                        <p>{data.data.value.price}</p>
-                        <p>more information</p>
+                        <p>{data.data.value.vkpreis + '€'}</p>
+                        <p>{'Artikelnummer: ' + data.data.value.artikelnr}</p>
+                        <p>{'Lagerbestand: ' + data.data.value.lagerbest}</p>
+                        <p>{'Barcode: ' + data.data.value.barcode}</p>
                         <div>
                             <button className="modal-content-description-button" onClick={e => {decreas();}}>-</button>
                             <input type="text" className="modal-content-description-input" value={amount} readOnly></input>

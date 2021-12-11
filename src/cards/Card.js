@@ -22,7 +22,9 @@ function Card(data) {
                 <div className="card-text-wrap">
                     <p className="title">{data.data.value.title}</p>
                     <p className="description">{data.data.value.desc}</p>
-                    <p className="price">{data.data.value.price}</p>
+                    <p className="price">{'Preis: ' + data.data.value.vkpreis + '€'}</p>
+                    <p>{'Artikelnummer: ' + data.data.value.artikelnr}</p>
+                    <p className="price">{'Lagerbestand: ' + data.data.value.lagerbest}</p>
                 </div>
             </div>
             <Cardmodal data={{ close: onClose, show: show, value: data.data.value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />

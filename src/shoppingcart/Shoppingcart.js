@@ -4,7 +4,6 @@ import './Shoppingcart.css';
 function Shoppingcart (data) {
 
     const prepareData = (itemsObject) => {
-        console.log(itemsObject)
         if (itemsObject.length === 0){
             return (
                 <p>Keine Produkte im Warenkorb</p>
@@ -25,10 +24,10 @@ function Shoppingcart (data) {
                             {Object.values(itemsObject).map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{Object.values(item)[0].amount}</td>
-                                        <td><img alt={Object.values(item)[0].title} src={Object.values(item)[0].image} className='scImage' /></td>
-                                        <td>{Object.values(item)[0].title}</td>
-                                        <td>{parseInt(Object.values(item)[0].price)*Object.values(item)[0].amount + '€'}</td>
+                                        <td>{item.amount}</td>
+                                        <td><img alt={item.title} src={item.image} className='scImage' /></td>
+                                        <td>{item.title}</td>
+                                        <td>{parseInt(item.vkpreis)*item.amount + '€'}</td>
                                     </tr>
                                 )
                             })}
@@ -42,6 +41,7 @@ function Shoppingcart (data) {
                             <tr>
                                 <th>Menge</th>
                                 <th>Bild</th>
+                                <th>Artikelnummer</th>
                                 <th>Produkt</th>
                                 <th>Beschreibung</th>
                                 <th>Preis</th>
@@ -52,11 +52,12 @@ function Shoppingcart (data) {
                             {Object.values(itemsObject).map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{Object.values(item)[0].amount}</td>
-                                        <td><img alt={Object.values(item)[0].title} src={Object.values(item)[0].image} className='scImage' /></td>
-                                        <td>{Object.values(item)[0].title}</td>
-                                        <td>{Object.values(item)[0].desc}</td>
-                                        <td>{parseInt(Object.values(item)[0].price)*Object.values(item)[0].amount + '€'}</td>
+                                        <td>{item.amount}</td>
+                                        <td><img alt={item.title} src={item.image} className='scImage' /></td>
+                                        <td>{item.artikelnr}</td>
+                                        <td>{item.title}</td>
+                                        <td>{item.desc}</td>
+                                        <td>{parseInt(item.vkpreis)*item.amount + '€'}</td>
                                         <td><button onClick={e => {data.data.deletFromShoppingcart(item)}}>Löschen</button></td>
                                     </tr>
                                 )

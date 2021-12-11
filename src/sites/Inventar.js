@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../cards/Card';
 import './Inventar.css';
-import traindata from '../Data.js';
+import inventurdata from '../Inventur2020.json';
 
 function Inventar(data) {
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo (0, 0);
         }, []);
     
     const [click, setClick] = useState(false);
@@ -44,29 +44,25 @@ function Inventar(data) {
                 </label>                             
                 <label className={click ? 'filter-label' : 'filter-label deactive'}>
                     Preis ab:
-                    <input type="number" placeholder="Preis ab" className="filter-priceup"></input>
+                    <input type="number" placeholder="Preis ab" className="filter-vkpreisup"></input>
                 </label>                             
                 <label className={click ? 'filter-label' : 'filter-label deactive'}>
                     Preis bis:
-                    <input type="number" placeholder="Preis bis" className="filter-pricedown"></input>
+                    <input type="number" placeholder="Preis bis" className="filter-vkpreisdown"></input>
                 </label>
                 <button className="filter-button">SUCHEN</button>
             </div>
             <div className="cards">
-                {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
-                })}
-                {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
-                })}
-                {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
-                })}
-                {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
-                })}
-                {traindata.map((value, index) => {
-                    return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
+                {Object.values(inventurdata).map(value => {
+                    return Object.values(value).map((values,index) => {
+                        if (index < 100) {
+                            console.log(index)
+                            console.log(values)
+                            return (<Card key={index} data={{ value: values, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
+                        } else {
+                            return null
+                        }
+                    })
                 })}
             </div>
         </div>

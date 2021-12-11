@@ -10,12 +10,9 @@ function Navbar(data) {
     const closeMobileMenu = () => setClick(false);
 
     const countItems = (items) => {
-        console.log(items)
         let count = 0;
-        items.forEach(item => {
-            // console.log(item)
-            // console.log(Object.values(item)[0])
-            count = count + Object.values(item)[0].amount;
+        Object.values(items).forEach(item => {
+            count = count + item.amount;
         });
         return count;
     }
