@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/modellbahnkaufmann/static/css/main.4c0734e0.chunk.css",
-    "main.js": "/modellbahnkaufmann/static/js/main.418194be.chunk.js",
-    "main.js.map": "/modellbahnkaufmann/static/js/main.418194be.chunk.js.map",
+    "main.css": "/modellbahnkaufmann/static/css/main.72c7de7e.chunk.css",
+    "main.js": "/modellbahnkaufmann/static/js/main.76ff7d12.chunk.js",
+    "main.js.map": "/modellbahnkaufmann/static/js/main.76ff7d12.chunk.js.map",
     "runtime-main.js": "/modellbahnkaufmann/static/js/runtime-main.ba2cb6a1.js",
     "runtime-main.js.map": "/modellbahnkaufmann/static/js/runtime-main.ba2cb6a1.js.map",
     "static/css/2.5fd93e2c.chunk.css": "/modellbahnkaufmann/static/css/2.5fd93e2c.chunk.css",
-    "static/js/2.6e152799.chunk.js": "/modellbahnkaufmann/static/js/2.6e152799.chunk.js",
-    "static/js/2.6e152799.chunk.js.map": "/modellbahnkaufmann/static/js/2.6e152799.chunk.js.map",
+    "static/js/2.ec294da4.chunk.js": "/modellbahnkaufmann/static/js/2.ec294da4.chunk.js",
+    "static/js/2.ec294da4.chunk.js.map": "/modellbahnkaufmann/static/js/2.ec294da4.chunk.js.map",
     "index.html": "/modellbahnkaufmann/index.html",
     "static/css/2.5fd93e2c.chunk.css.map": "/modellbahnkaufmann/static/css/2.5fd93e2c.chunk.css.map",
-    "static/css/main.4c0734e0.chunk.css.map": "/modellbahnkaufmann/static/css/main.4c0734e0.chunk.css.map",
-    "static/js/2.6e152799.chunk.js.LICENSE.txt": "/modellbahnkaufmann/static/js/2.6e152799.chunk.js.LICENSE.txt",
+    "static/css/main.72c7de7e.chunk.css.map": "/modellbahnkaufmann/static/css/main.72c7de7e.chunk.css.map",
+    "static/js/2.ec294da4.chunk.js.LICENSE.txt": "/modellbahnkaufmann/static/js/2.ec294da4.chunk.js.LICENSE.txt",
     "static/media/logo.0e8b86b0.png": "/modellbahnkaufmann/static/media/logo.0e8b86b0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ba2cb6a1.js",
     "static/css/2.5fd93e2c.chunk.css",
-    "static/js/2.6e152799.chunk.js",
-    "static/css/main.4c0734e0.chunk.css",
-    "static/js/main.418194be.chunk.js"
+    "static/js/2.ec294da4.chunk.js",
+    "static/css/main.72c7de7e.chunk.css",
+    "static/js/main.76ff7d12.chunk.js"
   ]
 }
