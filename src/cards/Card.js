@@ -17,13 +17,13 @@ function Card(data) {
         <div>
             <div className="card" onClick={e => {showModal();}}>
                 <div className="card-image-wrap">
-                    <img src={data.data.value.image} alt="train" className="card-image"></img>
+                    <img src={data.data.value.image} alt={data.data.value.title} className="card-image"></img>
                 </div>
                 <div className="card-text-wrap">
                     <p className="title">{data.data.value.title}</p>
                     <p className="description">{data.data.value.desc}</p>
                     <p className="price">{'Preis: ' + data.data.value.vkpreis + '€'}</p>
-                    <p>{'Artikelnummer: ' + data.data.value.artikelnr}</p>
+                    <p className="price">{'Artikelnummer: ' + data.data.value.artikelnr}</p>
                     <p className="price">{'Lagerbestand: ' + data.data.value.lagerbest}</p>
                 </div>
             </div>

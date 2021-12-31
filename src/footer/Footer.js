@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Logo from '../images/logo.png';
 import './Footer.css'
 
-function Footer() {
+function Footer(data) {
   return (
     <div className='footer-container'>
       <section className="footer-subscription-head">
@@ -19,7 +19,7 @@ function Footer() {
       <section className="footer-message">
         <input type="email" placeholder="Deine E-Mail Adresse" className="footer-massage-email"></input>
         <textarea type="textarea" placeholder="Deine Nachricht" className="footer-message-text"></textarea>
-        <button className="footer-message-button">Send <i className="fas fa-angle-double-right"></i></button>
+        <button className="footer-message-button" onClick={e => {data.data.sendMail('email', 'text', null)}}>Send <i className="fas fa-angle-double-right"></i></button>
       </section>
       <section className="footer-map">
         <iframe 

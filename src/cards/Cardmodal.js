@@ -21,7 +21,7 @@ function Cardmodal (data) {
             <div className="modal-content">
                 <span className="close" onClick={e => {data.data.close()}}>&times;</span>
                 <div className="modal-content-layout">
-                    <img src={data.data.value.image} alt='train' className="modal-image"/>
+                    <img src={data.data.value.image} alt={data.data.value.title} className="modal-image"/>
                     <div className="modal-content-description">
                         <p>{data.data.value.title}</p>
                         <p>{data.data.value.desc}</p>
@@ -29,6 +29,8 @@ function Cardmodal (data) {
                         <p>{'Artikelnummer: ' + data.data.value.artikelnr}</p>
                         <p>{'Lagerbestand: ' + data.data.value.lagerbest}</p>
                         <p>{'Barcode: ' + data.data.value.barcode}</p>
+                        <p>{'Hersteller: ' + data.data.value.porducer}</p>
+                        <p>{'test: ' + data.data.value.category}</p>
                         <div>
                             <button className="modal-content-description-button" onClick={e => {decreas();}}>-</button>
                             <input type="text" className="modal-content-description-input" value={amount} readOnly></input>

@@ -69,6 +69,22 @@ function Shoppingcart (data) {
         }
     }
 
+    const sumAmount = (itemsObject) => {
+        let amountSum = 0;
+        Object.values(itemsObject).map(item => {
+            return amountSum = amountSum + item.amount;
+        })
+        return amountSum;
+    }
+
+    const sumPrice = (itemsObject) => {
+        let priceSum = 0;
+        Object.values(itemsObject).map(item => {
+            return priceSum = priceSum + (item.vkpreis * item.amount);
+        })
+        return priceSum;
+    }
+
     return (
         <div id="myModal" className="modal-sc" style={{display: data.data.showScModal}}>
             <div className="modal-sc-content">
@@ -76,6 +92,17 @@ function Shoppingcart (data) {
                 <div className="modal-sc-content-layout">
                     <div className="modal-sc-content-description">
                         {prepareData(data.data.shoppingcart)}
+                        <div>
+                            <p style={{'textAlign': 'left'}}>Gesamte Menge: {sumAmount(data.data.shoppingcart)}</p>
+                            <p style={{'textAlign': 'left'}}>Gesamter Preis: {sumPrice(data.data.shoppingcart)} €</p>
+                            <p style={{'textAlign': 'left'}}>Warenkorb anfragen:</p>
+                            <section className="footer-message">
+                                <input type="email" placeholder="Deine E-Mail Adresse" className="footer-massage-email"></input>
+                                <textarea type="textarea" placeholder="Deine Nachricht" className="footer-message-text"></textarea>
+                                <button className="footer-message-button" onClick={e => {data.data.sendMail('email', 'text', data.data.shoppingcart)}}>Send <i className="fas fa-angle-double-right"></i></button>
+                            </section>
+                            <p style={{'textAlign': 'left'}}>Im Anhang befindet sich dein Warenkorb.</p>
+                        </div>
                     </div>
                 </div>
             </div>

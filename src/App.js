@@ -40,11 +40,9 @@ function App() {
   }
 
   const deletFromShoppingcart = (item) => {
-    console.log(Object.values(item)[0].title)
-    setShoppingcart(shoppingcart.filter(i => Object.values(i)[0].title !== Object.values(item)[0].title));
+    setShoppingcart(Object.values(shoppingcart).filter(i => i.title !== item.title));
   }
 
-  // Object.values(i)[0].title !== Object.values(item)[0].title
   const showShoppingcartModal = () => {
     setshowScModal('block');
   }
@@ -53,10 +51,16 @@ function App() {
     setshowScModal('none');
   }
 
+  const sendMail = (email, text, sc) => {
+    console.log(sc)
+    console.log(email)
+    console.log(text)
+  }
+
   return (
     <div className="App">
       <Navbar data={{ shoppingcart: shoppingcart, showShoppingcartModal: showShoppingcartModal }}/>
-      <Shoppingcart data={{ closeShoppingcartModal: closeShoppingcartModal, showScModal: showScModal, shoppingcart: shoppingcart, deletFromShoppingcart: deletFromShoppingcart }}/>
+      <Shoppingcart data={{ closeShoppingcartModal: closeShoppingcartModal, showScModal: showScModal, shoppingcart: shoppingcart, deletFromShoppingcart: deletFromShoppingcart, sendMail: sendMail }}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -69,7 +73,7 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
+      <Footer data={{ sendMail: sendMail }}/>
     </div>
   );
 }
