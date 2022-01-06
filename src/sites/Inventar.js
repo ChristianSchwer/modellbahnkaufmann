@@ -11,12 +11,19 @@ function Inventar(data) {
     
     const [click, setClick] = useState(false);
     const [filter, setFilter] = useState({ searchterm: "", category: "", producer: "", pricefrom: "", priceto: "" });
+    const [counter, setCounter] = useState(50);
+    // const [productCounter, setProductCounter] = useState(50);
 
     const handleClick = () => setClick(!click);
 
     const handleChange = (e) => {
         // update the filter
         setFilter({...filter, [e.id]: e.value});
+    }
+
+    const adjustCounter = () => {
+        setCounter(counter+50);
+        // setProductCounter(productCounter+50);
     }
 
     const filterData = (idata, data) => {
@@ -29,32 +36,22 @@ function Inventar(data) {
                 return null;
             }
         })
+        let internCounter = counter;
         // filter
         if (aktivefilter === true) {
-            return (Object.values(idata).map((ivalues,i) => {
+            return (Object.values(idata).map(ivalues => {
                 let filteredObjects = [];
-                Object.values(ivalues).map((value,index) => {
-                    if (index < 100) {
-                        if (filter.searchterm !== '') {
-                            let productdetailsforfilter = [value.artikelnr, value.bestellnr, value.desc, value.title];
-                            let result;
-                            result = productdetailsforfilter.filter(productdetails => {
-                                if (productdetails !== null) {
-                                    return productdetails.toString().toLowerCase().includes(filter.searchterm.toString().toLowerCase());
-                                } else {
-                                    return null;
-                                }
-                            })
-                            if (result.length >= 1) {
-                                filteredObjects.push(value);
-                            }
-                        } else {
-                            filteredObjects.push(value);
-                        }
-                        return null;
-                    }
-                    return null;
-                })
+                searchFilter(ivalues, internCounter, filteredObjects);
+                console.log(filteredObjects.length);
+                console.log(internCounter)
+                if (internCounter <= ivalues.length && filteredObjects.length < 51) {
+                    internCounter+=50;
+                    setCounter(internCounter);
+                    console.log('1')
+                    searchFilter(ivalues, internCounter, filteredObjects);
+                    console.log('2')
+                }
+                console.log('3')
                 if (filter.category !== '') {
                     filteredObjects = filteredObjects.filter(value => {
                         if (value.category === filter.category) {
@@ -91,6 +88,8 @@ function Inventar(data) {
                         }
                     });
                 }
+                console.log(filteredObjects.length)
+                // setProductCounter(filteredObjects.length);
                 return filteredObjects.map((value, index) => {
                     return (<Card key={index} data={{ value: value, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                 })
@@ -99,7 +98,7 @@ function Inventar(data) {
             // no filter
             return (Object.values(idata).map(value => {
                 return Object.values(value).map((values,index) => {
-                    if (index < 100) {
+                    if (index < counter) {
                         return (<Card key={index} data={{ value: values, addToShoppingcart: data.data.addToShoppingcart, showShoppingcartModal: data.data.showShoppingcartModal }} />)
                     } else {
                         return null
@@ -107,6 +106,32 @@ function Inventar(data) {
                 })
             }));
         }
+    }
+
+    const searchFilter = (ivalues, internCounter, filteredObjects) => {
+        Object.values(ivalues).map((value,index) => {
+            if (index < internCounter) {
+                if (filter.searchterm !== '') {
+                    let productdetailsforfilter = [value.artikelnr, value.bestellnr, value.desc, value.title];
+                    let result;
+                    result = productdetailsforfilter.filter(productdetails => {
+                        if (productdetails !== null) {
+                            return productdetails.toString().toLowerCase().includes(filter.searchterm.toString().toLowerCase());
+                        } else {
+                            return null;
+                        }
+                    })
+                    if (result.length >= 1) {
+                        filteredObjects.push(value);
+                    }
+                } else {
+                    // if no searchterm is set push as many products as the intern Counter is
+                    filteredObjects.push(value);
+                }
+                return null;
+            }
+            return null;
+        })
     }
 
     return (
@@ -148,10 +173,12 @@ function Inventar(data) {
                     Preis bis:
                     <input id="priceto" type="number" placeholder="Preis bis" className="filter-vkpreisdown" onChange={e => {handleChange(e.target)}}></input>
                 </label>
+                {/* <input value={counter + '/' + Object.values(inventurdata)[0].length} readOnly></input> */}
             </div>
             <div className="cards">
                 {filterData(inventurdata, data)}
             </div>
+            <button onClick={e => {adjustCounter()}}>Lade mehr Produkte</button>
         </div>
     )
 }

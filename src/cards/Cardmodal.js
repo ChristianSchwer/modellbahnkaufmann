@@ -25,7 +25,7 @@ function Cardmodal (data) {
                     <div className="modal-content-description">
                         <p>{data.data.value.title}</p>
                         <p>{data.data.value.desc}</p>
-                        <p>{data.data.value.vkpreis + '€'}</p>
+                        <p>{(+(Math.round(data.data.value.vkpreis + "e+2")  + "e-2")) + '€'}</p>
                         <p>{'Artikelnummer: ' + data.data.value.artikelnr}</p>
                         <p>{'Lagerbestand: ' + data.data.value.lagerbest}</p>
                         <p>{'Barcode: ' + data.data.value.barcode}</p>

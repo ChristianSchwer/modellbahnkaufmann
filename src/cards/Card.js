@@ -22,7 +22,7 @@ function Card(data) {
                 <div className="card-text-wrap">
                     <p className="title">{data.data.value.title}</p>
                     <p className="description">{data.data.value.desc}</p>
-                    <p className="price">{'Preis: ' + data.data.value.vkpreis + '€'}</p>
+                    <p className="price">{'Preis: ' + (+(Math.round(data.data.value.vkpreis + "e+2")  + "e-2")) + '€'}</p>
                     <p className="price">{'Artikelnummer: ' + data.data.value.artikelnr}</p>
                     <p className="price">{'Lagerbestand: ' + data.data.value.lagerbest}</p>
                 </div>
