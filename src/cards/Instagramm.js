@@ -4,7 +4,7 @@ import 'react-ig-feed/dist/index.css';
 
 function Instagramm() {
 
-  const token = "IGQVJVMTNvQjlnUXB6UzFPeDlBVFdLbUFTWmN6eGtRN0NlMkItVmtfdC1jMlVjU3ZAHTzNOVlgtaWtnYi1KTDVGVy1KbTVweDd5eHBsX1lFMHNxVnhiYXUxVi1qRmZA0VVRwNGsyd29SU2ljaGdzSFlvVAZDZD";
+  const token = "INSTAGRAM_TOKEN";
 
   return (
     <InstagramFeed token={token} counter="6" />
