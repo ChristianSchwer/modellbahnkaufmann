@@ -1,0 +1,87 @@
+ /* The Modal (background) */
+.modal-sc {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 200; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-sc-content {
+  background-color: var(--background-color-cards);
+  margin: 6% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid black;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  color: black;
+  border-radius: 5px;
+}
+
+.modal-sc-content-layout {
+  display: flex;
+  /* grid-template-columns: repeat(2, 50%); */
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid gray;
+  margin-top: 38px;
+}
+
+tr {
+  height: 50px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  height: 50px;
+  border: 1px solid gray;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+textarea {
+  background-color: var(--background-color-cards);
+}
+
+.scImage {
+  height: 100%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+@media screen and (max-width: 960px) {
+  tr {
+    height: 20px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 4px;
+    height: 20px;
+    border: 1px solid gray;
+    font-size: 15px;
+  }
+}

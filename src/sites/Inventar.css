@@ -1,0 +1,89 @@
+.inventar {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 8px;
+    margin: 1% 0.5%;
+    padding: 10px;
+    background-color: var(--background-color-cards);
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin: 0 100px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+}
+
+.filter-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-datainput {
+    margin-left: 10px;
+}
+
+.filter-dropdown {
+    margin-left: 10px;
+}
+
+input {
+    padding: 6px 20px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--background-color-cards);
+}
+
+select {
+    padding: 6px 20px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--background-color-cards);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
+.filter-icon {
+    display: none;
+}
+
+.modal-content-description-button-add-nodisplay {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .inventar {
+        margin: 0 0.5% 1% 0.5%
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, calc(100% / 3));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .filter {
+        margin: 0 50px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .filter {
+        margin: 0 15px;
+    }
+
+    .cards {
+        grid-template-columns: 100%;
+    }
+}

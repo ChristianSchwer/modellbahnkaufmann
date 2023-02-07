@@ -1,0 +1,26 @@
+.legal {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 8px;
+    margin: 1% 0.5%;
+    padding: 10px;
+    background-color: var(--background-color-cards);
+    text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+h2 {
+    padding-left: 2%;
+}
+
+h3 {
+    padding-left: 3%;
+}
+
+p, ul {
+    padding-left: 6%;
+}
+
+li {
+    margin-left: 2%;
+}

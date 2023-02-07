@@ -1,0 +1,59 @@
+.card {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 8px;
+    background-color: var(--background-color-cards);
+    height: 270px;
+    margin: 8px;
+}
+
+.card-image-wrap {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-image {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+}
+
+.card-text-wrap {
+    height: 40%;
+    padding-top: 10%;
+    text-align: left;
+}
+
+.title {
+    margin: 0;
+    padding-left: 6%;
+}
+
+.price {
+    margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-image-wrap {
+        height: 45%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .card-image-wrap {
+        height: 40%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card-image-wrap {
+        height: 35%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card-image-wrap {
+        height: 30%;
+    }
+}

@@ -1,0 +1,34 @@
+.news {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 8px;
+    margin: 1% 0.5%;
+    padding: 10px;
+    background-color: var(--background-color-cards);
+}
+
+._2R-kh {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+._vzTHL {
+    height: 200px;
+}
+
+.instaPosts {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 8px;
+    margin: 1% 0.5%;
+    padding: 10px;
+    background-color: var(--background-color-cards);
+}
+
+@media screen and (max-width: 960px) {
+    .news {
+        margin: 0 0.5% 1% 0.5%
+    }
+
+    .instaPosts {
+        margin: 0 0.5% 1% 0.5%
+    }
+}

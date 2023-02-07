@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# ModellbahnKaufmann Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## ToDos:
 
-In the project directory, you can run:
+360° Room Tour
+News Tab mit file
+Öffnungszeiten mit file
 
 ### `npm start`
 

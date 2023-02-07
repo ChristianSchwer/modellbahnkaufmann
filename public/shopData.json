@@ -1,0 +1,62 @@
+{
+    "1" : {
+      "artikelnr": "001-00174",
+      "title": "Paletten",
+      "vkpreis": "3.3",
+      "barcode": "9005033001742",
+      "bestellnr": "174",
+      "image": "/images/Busch/1810.jpg",
+      "category": "Paletten",
+      "producer": "Busch"
+    },
+    "2" : {
+        "artikelnr": "001-00175",
+        "title": "Packet auf Palette",
+        "vkpreis": "3.3",
+        "barcode": "9005033001745",
+        "bestellnr": "175",
+        "image": "/images/Busch/1811.jpg",
+        "category": "Packete",
+        "producer": "Busch"
+    },
+    "3" : {
+        "artikelnr": "37232",
+        "title": "Lokomotive V2IZ",
+        "vkpreis": "330",
+        "barcode": "9005037232",
+        "bestellnr": "37232",
+        "image": "/images/PIKO/37232.jpg",
+        "category": "Dampflokomotive",
+        "producer": "PIKO"
+    },
+    "4" : {
+        "artikelnr": "37250",
+        "title": "Lokomotive V3IZ",
+        "vkpreis": "430",
+        "barcode": "9005037250",
+        "bestellnr": "37250",
+        "image": "/images/PIKO/37250.jpg",
+        "category": "Dampflokomotive",
+        "producer": "PIKO"
+    },
+    "5" : {
+        "artikelnr": "64191",
+        "title": "3er-Set ÖBB Waggons",
+        "vkpreis": "888",
+        "barcode": "9005064191",
+        "bestellnr": "64191",
+        "image": "/images/Roco/64191.jpg",
+        "category": "Waggon",
+        "producer": "Roco"
+    },
+    "6" : {
+        "artikelnr": "73247",
+        "title": "Lokomotive V3IZ",
+        "vkpreis": "450",
+        "barcode": "90050373247",
+        "bestellnr": "73247",
+        "image": "/images/Roco/73247.jpg",
+        "category": "E-Lokomotive",
+        "producer": "Roco"
+    }
+}

@@ -1,0 +1,226 @@
+.footer-container {
+    background-color: #242424;
+    padding: 4rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 'footer-subscription-head footer-subscription-head footer-map footer-links' 'footer-subscription footer-message footer-map footer-links';
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 8px;
+    margin: 0.5% 0.5% 0 0.5%;
+}
+
+.footer-subscription-head {
+    grid-area: footer-subscription-head;
+}
+
+.footer-subscription {
+    grid-area: footer-subscription;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    color: var(--text-color-footer);
+}
+
+.footer-subscription > p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer-subscription-heading {
+    margin: 0 20px 0 20px;
+    font-size: 28px;
+    color: var(--text-color-footer);
+}
+
+.footer-subscription-text {
+    margin: 10px 0 0 20%;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.footer-input-area {
+    width: 60%;
+}
+
+.footer-label {
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+}
+
+.footer-input {
+    display: block;
+    width: 100%;
+    padding: 8px 0 8px 8px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+}
+
+.footer-input::placeholder {
+    color: #b1b1b1;
+}
+
+.footer-message {
+    grid-area: footer-message;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.footer-massage-email {
+    color: black;
+    background-color: rgb(226, 211, 213);
+}
+
+.footer-message-text {
+    height: 100px;
+    background-color: rgb(226, 211, 213);
+}
+
+.footer-message-button {
+    margin-top: -30px;
+    margin-left: 75%;
+    width: 20%;
+    text-align: center;
+    background-color: rgb(30, 139, 240);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.email-message {
+    color: rgb(226, 211, 213);
+}
+
+textarea {
+    padding: 6px 20px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer-map {
+    grid-area: footer-map;
+}
+
+.footer-map-iframe {
+    border-radius: 8px;
+}
+
+/* Links */
+.footer-links {
+    grid-area: footer-links;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-logo-footer {
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+    display: flex;
+    width: 50%;
+}
+
+.social-logo {
+    display: flex;
+    justify-content: center;
+}
+
+ /* Social Icons */
+ .social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    width: 55px;
+}
+
+.social-icon-link {
+    color: var(--text-color-footer);
+    font-size: 24px;
+    padding-right: 1rem;
+}
+
+.social-icon-link:hover {
+    color: #617e7e;
+    transition: 0.3s ease-out;
+}
+
+.footer-links-item {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 100px;
+}
+
+.footer-links-item a {
+    color: var(--text-color-footer);
+    text-decoration: none;
+    margin: 2rem 1rem 2rem 0;
+    font-size: 16px;
+}
+
+.footer-links-item a:hover {
+    color: #617e7e;
+    transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 960px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+    
+    .footer-input-area {
+        width: 80%;
+    }
+
+    .footer-links {
+        align-items: flex-start;
+    }
+
+    .social-logo {
+        margin: 0 0 1rem 20%;
+        justify-content: start;
+    }
+
+    .social-icons {
+        margin: 0 0 1rem 20%;
+    }
+    
+    .footer-links-item {
+        flex-direction: row;
+        margin-left: 20%;
+    }
+
+    .footer-links-item a {
+        margin: 0 1rem 1rem 0;
+    }
+
+    .footer-message {
+        margin: 0;
+        width: 300px;
+        margin-top: 10px;
+    }
+
+    .footer-massage-email {
+        position: relative;
+        margin: 0;
+        left: 0;
+    }
+
+    .footer-map {
+        margin-top: 20px;
+    }
+}
