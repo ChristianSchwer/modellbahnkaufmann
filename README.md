@@ -6,7 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 360° Room Tour
 News Tab mit file
-Öffnungszeiten mit file
 
 ### `npm start`
 

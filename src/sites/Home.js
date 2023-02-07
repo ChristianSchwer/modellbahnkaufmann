@@ -37,7 +37,7 @@ function Home() {
                     <p style={{'lineHeight': '0.3', 'paddingLeft': '0%'}}>{openTime['Oeffnungszeiten']['Zeile3']}</p>
                 </div>
                 <div className="instaPosts">
-                    {/* <Instagramm /> */}
+                    <Instagramm />
                 </div>
             </div>
         )
